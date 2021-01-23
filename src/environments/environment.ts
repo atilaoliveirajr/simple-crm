@@ -3,8 +3,19 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: true,
+  firebase: {
+    apiKey: "AIzaSyA9skWc6fIBVaPlY3BURecQyup92CAxWho",
+    authDomain: "simple-crm-9fe31.firebaseapp.com",
+    projectId: "simple-crm-9fe31",
+    storageBucket: "simple-crm-9fe31.appspot.com",
+    messagingSenderId: "777651983391",
+    appId: "1:777651983391:web:c065a84b7385aad800312a",
+    measurementId: "G-GT596VXKDX",
+    /* databaseURL: '<https://simple-crm-9fe31.firebaseio.com>' */
+  }
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file
