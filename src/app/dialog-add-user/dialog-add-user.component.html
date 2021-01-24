@@ -4,9 +4,9 @@
 
     <h1 mat-dialog-tittle>Add User</h1>
     <div mat-dialog-content>
-        <div class="form-line mr-16 width-100">
 
-            <mat-form-field appearance="outline">
+        <div class="form-line width-100">
+            <mat-form-field appearance="outline" class="mr-16">
                 <mat-label>First Name</mat-label>
                 <input matInput [disabled]="loading" [(ngModel)]="user.firstName">
             </mat-form-field>
@@ -15,26 +15,30 @@
                 <mat-label>Last Name</mat-label>
                 <input [disabled]="loading" [(ngModel)]="user.lastName" matInput>
             </mat-form-field>
-
         </div>
-        <div>
 
-            <mat-form-field appearance="outline" class="width-100">
+        <div class="form-line width-100">
+            <mat-form-field appearance="outline" class="mr-16">
                 <mat-label>Birth Date</mat-label>
                 <input [disabled]="loading" [(ngModel)]="birthDate" [matDatepicker]="picker" matInput>
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
-
+            <mat-form-field appearance="outline">
+                <mat-label>E-mail</mat-label>
+                <input [disabled]="loading" [(ngModel)]="user.email" matInput>
+            </mat-form-field>
         </div>
+
         <div>
             <mat-form-field class="width-100" appearance="outline">
                 <mat-label>Street and Nr.</mat-label>
                 <input [disabled]="loading" [(ngModel)]="user.street" matInput>
             </mat-form-field>
         </div>
+
         <div class="form-line">
-            <mat-form-field appearance="outline">
+            <mat-form-field appearance="outline" class="mr-16">
                 <mat-label>Zip code</mat-label>
                 <input [disabled]="loading" [(ngModel)]="user.zipCode" matInput>
             </mat-form-field>
@@ -43,10 +47,12 @@
                 <input [disabled]="loading" [(ngModel)]="user.city" matInput>
             </mat-form-field>
         </div>
+
         <div mat-dialog-action>
-            <button [disabled]="loading" mat-raised-button color="warn" class="mr-16">Cancel</button>
+            <button [disabled]="loading" mat-raised-button (click)="dialogRef.close()" color="warn" class="mr-16">Cancel</button>
             <button [disabled]="loading" mat-raised-button (click)="saveUser()" cdkFocusInitial>Save</button>
         </div>
+
     </div>
 
 </div>
