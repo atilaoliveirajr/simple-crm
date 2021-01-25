@@ -15,4 +15,10 @@ body {
     .width-100 {
         width: 100%;
     }
+    .mt-32 {
+        margin-top: 32px;
+    }
+    .color-inver {
+        filter: invert(1);
+    }
 }

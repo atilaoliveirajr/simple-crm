@@ -14,6 +14,7 @@ export class UserListComponent implements OnInit {
   displayedColumns = ['firstName', 'city', 'email'];
   allUsers = [];
 
+
   constructor(private firestore: AngularFirestore) {
 
   }

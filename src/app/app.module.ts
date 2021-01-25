@@ -28,6 +28,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { UserListComponent } from './user-list/user-list.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { UserListComponent } from './user-list/user-list.component';
     UserComponent,
     DialogAddUserComponent,
     UserListComponent,
+    UserDetailComponent,
   ],
   imports: [
     BrowserModule,
